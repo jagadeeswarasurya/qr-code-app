@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const downloadBtn = document.getElementById("downloadBtn");
 
     // Your deployed backend URL on Render
-const backendUrl = "https://qr-code-app-fdp6.onrender.com/api/qrcode";
+    const backendUrl = "https://qr-code-app-fdp6.onrender.com/api/qrcode";
 
     // Debugging: Check if elements exist
     if (!qrText || !qrImage || !downloadBtn) {
@@ -21,7 +21,7 @@ const backendUrl = "https://qr-code-app-fdp6.onrender.com/api/qrcode";
             return;
         }
 
-        fetch(`/generate?q=${encodeURIComponent(text)}`)
+        fetch(`${backendUrl}?text=${encodeURIComponent(text)}`)
             .then(response => response.json())
             .then(data => {
                 if (data.qrCode) {
