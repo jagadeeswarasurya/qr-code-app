@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:3000/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator &amp; Decoder</title>
+    <link href="./img_files/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./img_files/styles.css">
+    <script src="./img_files/script.js.download"></script>
+
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <h1 class="text-center text-primary mb-4">QR Code Generator &amp; Decoder</h1>
+
+        <!-- QR Code Generator -->
+        <div class="card shadow p-4 mb-4">
+            <h3 class="text-center text-success">Generate QR Code</h3>
+            <div class="mb-3">
+                <label class="form-label">Enter text:</label>
+                <input type="text" id="qrText" class="form-control" placeholder="Enter text for QR code">
+            </div>
+            <button onclick="generateQRCode()" class="btn btn-primary w-100">Generate</button>
+            <div class="text-center mt-3">
+                <img id="qrImage" class="img-fluid mt-2" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHQAAAB0CAYAAABUmhYnAAAAAklEQVR4AewaftIAAAKsSURBVO3BQY7cQAwEwSxC//9yeo48NSBIs17TjIgfrDGKNUqxRinWKMUapVijFGuUYo1SrFGKNUqxRinWKMUapVijFGuUYo1y8VASfpLKHUnoVO5Iwk9SeaJYoxRrlGKNcvEylTcl4Y4kfJPKm5LwpmKNUqxRijXKxZcl4Q6VO5LwRBI6lTuScIfKNxVrlGKNUqxRLoZR6ZLQJaFTmaRYoxRrlGKNcvGfUemS0Kn8y4o1SrFGKdYoF1+m8pOScJKETuUJld+kWKMUa5RijXLxsiT8TSpdEjqVLgmdykkSfrNijVKsUYo1SvzgH5aETuV/VqxRijVKsUa5eCgJnUqXhDepdCp3JKFTOUnCm1S+qVijFGuUYo0SP3hREk5UuiScqJwk4USlS8ITKidJeELliWKNUqxRijVK/OCBJHQqJ0n4m1S6JHQqXRJOVLok3KHypmKNUqxRijVK/OBFSehUuiR0Kl0SOpUuCZ1Kl4RvUjlJwhMqTxRrlGKNUqxRLr4sCZ1Kl4ROpUvCSRLuUOmS0KmcJKFTOVH5ScUapVijFGuUi5ep3KFyonKShN9EpUvCHSpPFGuUYo1SrFHiBw8k4Sep3JGEE5UuCZ3KSRI6lZMkdCpvKtYoxRqlWKNcvEzlTUk4ScIdKicqJ0k4ScLfVKxRijVKsUa5+LIk3KHyhMpJEjqVLgmdSqfSJeFEpUvCNxVrlGKNUqxRLv5zSThJwonKHSrfVKxRijVKsUa5GCYJnUqn0iWhU+mScEcSTlS+qVijFGuUYo1y8WUq36RyRxJOknCi8psVa5RijVKsUS5eloSflIQ7VLokdConSehUOpWTJHQqbyrWKMUapVijxA/WGMUapVijFGuUYo1SrFGKNUqxRinWKMUapVijFGuUYo1SrFGKNUqxRvkD13YJ6b6CqoQAAAAASUVORK5CYII=" alt="QR Code">
+            </div>
+        </div>
+
+        <!-- QR Code Decoder -->
+        <div class="card shadow p-4">
+            <h3 class="text-center text-danger">Decode QR Code</h3>
+            <div class="mb-3">
+                <label class="form-label">Upload QR Code:</label>
+                <input type="file" id="qrFile" class="form-control">
+            </div>
+            <button onclick="decodeQRCode()" class="btn btn-danger w-100">Decode</button>
+            <div class="alert alert-info mt-3" id="decodedText"></div>
+        </div>
+    </div>
+
+    <script src="./img_files/script.js.download"></script>
+
+
+</body></html>
