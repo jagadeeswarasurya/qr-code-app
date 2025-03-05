@@ -1,11 +1,13 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const cors = require("cors");  // Import CORS
 const qr = require("qrcode");
 
 const app = express();
 const PORT = 3000;
 
 // Middleware
+app.use(cors());  // Enable CORS for all origins
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static("public")); // Serve static frontend files
