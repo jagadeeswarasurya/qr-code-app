@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 app.use(express.static("public")); // Serve static frontend files
 
 // Generate QR Code
-app.get("/generate", async (req, res) => {
+app.get("/api/qrcode", async (req, res) => {
     const text = req.query.q;
     if (!text) return res.status(400).send("Missing query parameter 'q'");
 
