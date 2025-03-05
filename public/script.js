@@ -4,6 +4,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const qrImage = document.getElementById("qrImage");
     const downloadBtn = document.getElementById("downloadBtn");
 
+    // Your deployed backend URL on Render
+const backendUrl = "https://qr-code-app-fdp6.onrender.com/api/qrcode";
+
     // Debugging: Check if elements exist
     if (!qrText || !qrImage || !downloadBtn) {
         console.error("One or more elements not found! Check your HTML IDs.");
